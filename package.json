@@ -39,5 +39,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "lint-staged": ">=10",
+    "prettier": "2.2.1",
+    "simple-git-hooks": ">=2.0.3"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
   }
 }
